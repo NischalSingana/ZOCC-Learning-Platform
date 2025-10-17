@@ -10,25 +10,166 @@ export const curriculumData = {
       level: "Beginner",
       isLocked: false,
       progress: 0,
+      description: "Master the building blocks of web development with comprehensive HTML structure and CSS styling. Learn to create responsive, accessible websites from scratch.",
+      totalLessons: 16,
+      totalHours: 32,
       topics: [
         {
-          id: "html-basics",
-          title: "HTML Structure & Elements",
-          duration: "1 week",
-          lessons: [
+          id: "html-structure",
+          title: "HTML Document Structure",
+          duration: "2 hours",
+          difficulty: "Beginner",
+          description: "Learn the fundamental structure of HTML documents and essential elements.",
+          keyConcepts: [
+            "DOCTYPE Declaration",
+            "HTML, Head, and Body Elements",
+            "Meta Tags and Document Information",
+            "Basic HTML Syntax"
+          ],
+          mindMap: {
+            id: "root",
+            title: "HTML Fundamentals",
+            description: "Core concepts of HTML structure and elements",
+            detailedDescription: "HTML (HyperText Markup Language) is the foundation of web development. It provides the structure and content for web pages using a system of tags and attributes.",
+            children: [
+              {
+                id: "structure",
+                title: "Document Structure",
+                description: "Basic HTML document layout",
+                examples: ["DOCTYPE declaration", "html, head, body tags", "meta tags"]
+              },
+              {
+                id: "semantic",
+                title: "Semantic Elements",
+                description: "Meaningful HTML elements",
+                examples: ["header, nav, main", "article, section", "aside, footer"]
+              },
+              {
+                id: "forms",
+                title: "Forms & Inputs",
+                description: "User input collection",
+                examples: ["input types", "validation", "form submission"]
+              }
+            ]
+          },
+          flowChart: [
             {
-              id: "html-intro",
-              title: "Introduction to HTML",
-              duration: "2 hours",
-              type: "video",
-              content: "Learn the basics of HTML structure and semantic elements."
+              id: "start",
+              title: "Start Learning HTML",
+              description: "Begin with understanding what HTML is and why it's important",
+              type: "Introduction"
             },
             {
-              id: "html-forms",
-              title: "HTML Forms & Inputs",
-              duration: "1.5 hours",
-              type: "video",
-              content: "Master form creation and input validation."
+              id: "structure",
+              title: "Learn Document Structure",
+              description: "Understand the basic structure of an HTML document",
+              type: "Concept",
+              code: `<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My First Page</title>
+</head>
+<body>
+    <h1>Hello World!</h1>
+</body>
+</html>`
+            },
+            {
+              id: "elements",
+              title: "Master HTML Elements",
+              description: "Learn about different HTML elements and their purposes",
+              type: "Practice",
+              examples: [
+                "Headings: h1, h2, h3, h4, h5, h6",
+                "Text: p, span, strong, em",
+                "Lists: ul, ol, li"
+              ]
+            },
+            {
+              id: "forms",
+              title: "Create Forms",
+              description: "Build interactive forms for user input",
+              type: "Application",
+              code: `<form action="/submit" method="post">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+    <button type="submit">Submit</button>
+</form>`
+            }
+          ],
+          codeExamples: [
+            {
+              title: "Basic HTML Structure",
+              language: "html",
+              code: `<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Site</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <article>
+            <h2>Article Title</h2>
+            <p>This is the main content of the article.</p>
+        </article>
+    </main>
+    <footer>
+        <p>&copy; 2024 My Website</p>
+    </footer>
+</body>
+</html>`,
+              explanation: "This example shows a complete HTML document with semantic elements including header, nav, main, article, and footer.",
+              interactive: true,
+              editable: true
+            },
+            {
+              title: "HTML Form Example",
+              language: "html",
+              code: `<form action="/contact" method="post">
+    <fieldset>
+        <legend>Contact Information</legend>
+        <div>
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+        </div>
+        <button type="submit">Send Message</button>
+    </fieldset>
+</form>`,
+              explanation: "This form demonstrates proper form structure with labels, different input types, and validation attributes.",
+              output: "A contact form with name, email, and message fields",
+              interactive: true
+            }
+          ],
+          practiceExercises: [
+            {
+              title: "Create a Personal Bio Page",
+              description: "Build a simple HTML page with your personal information using semantic elements",
+              difficulty: "Beginner"
+            },
+            {
+              title: "Build a Contact Form",
+              description: "Create a contact form with validation for name, email, and message fields",
+              difficulty: "Intermediate"
             }
           ],
           project: {
